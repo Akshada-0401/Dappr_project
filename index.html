@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dappr Layout with Fixed Header</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        /* Fixed Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #7f6cf4;
+            color: white;
+            padding: 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        /* Header Links */
+        .header nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            padding-top: 100px; 
+        }
+
+        .stats-section {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .stat-box {
+            background-color: #d2c4fc;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 20%;
+            font-weight: bold;
+        }
+
+        .stat-box:nth-child(4) {
+            background-color: black;
+            color: white;
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .left {
+            width: 35%;
+        }
+
+        .right {
+            width: 55%;
+            background-color: #d2c4fc;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* Sidebar and info for Page 2 */
+        .sidebar {
+            background-color: #7f6cf4;
+            width: 20%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding: 20px;
+            color: white;
+        }
+
+        .sidebar button {
+            background-color: #d2c4fc;
+            color: black;
+            border: none;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .sidebar button:hover {
+            background-color: #e0d4fe;
+        }
+
+        .user-info {
+            background-color: #d2c4fc;
+            padding: 20px;
+            width: 80%;
+            border-radius: 10px;
+        }
+
+        .user-info p {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        /* Social Media Icons */
+        .social-icons {
+            position: fixed;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .social-icons a {
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        .social-icons img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .next-button {
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        /* General Styles for images */
+        img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Fixed Header -->
+    <div class="header">
+        <div>DAPPR</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Information</a>
+            <a href="#">More</a>
+        </nav>
+        <input type="text" placeholder="Search">
+    </div>
+
+    <!-- Page 1 (pagenew1) Content -->
+    <div class="container">
+        <div class="content">
+            <div class="left">
+                <img src="D:\WEB DEVELOPEMENT\Frontend_developement\Cuvette_Tech\Dappr_project\images\program.jpg" alt="Programming Image">
+            </div>
+            <div class="right">
+                <p>It's not only writers who can benefit from this free online tool. If you're a programmer who's working on a ___</p>
+            </div>
+        </div>
+
+        <div class="stats-section">
+            <div class="stat-box">Total Questions: 200,000</div>
+            <div class="stat-box">Total Answers: 105,000</div>
+            <div class="stat-box">Participated: 10,000</div>
+            <div class="stat-box">Total Passed: 6,000</div>
+        </div>
+
+        <div class="social-icons">
+            <a href="#"><img src="D:\WEB DEVELOPEMENT\Frontend_developement\Cuvette_Tech\Dappr_project\images\whatsapp.jpg" alt="WhatsApp"></a>
+            <a href="#"><img src="D:\WEB DEVELOPEMENT\Frontend_developement\Cuvette_Tech\Dappr_project\images\facebook.jpg" alt="Facebook"></a>
+            <a href="#"><img src="D:\WEB DEVELOPEMENT\Frontend_developement\Cuvette_Tech\Dappr_project\images\twitter.jpg" alt="Twitter"></a>
+        </div>
+    </div>
+
+    <!-- Page 2 (pagenew2) Content -->
+    <div class="container">
+        <div class="content">
+            <div class="sidebar">
+                <button>Your Info</button>
+                <button>Bookmarks</button>
+                <button>Settings</button>
+            </div>
+
+            <div class="user-info">
+                <p><strong>Name:</strong> Atul Singhal</p>
+                <p><strong>Email:</strong> atul@gmail.com</p>
+                <p><strong>Phone:</strong> +91 8131424888</p>
+                <p><strong>Marks:</strong> 500.00</p>
+                <button class="next-button">Next</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
